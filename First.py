@@ -4,5 +4,5 @@ def minmax(items):
 
 print(minmax([1,2,3,4,5,22,-1]))
 
-
+print(__name__)
 
