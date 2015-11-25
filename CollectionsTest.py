@@ -1,10 +1,17 @@
 from pprint import pprint as pp
 
-developerSet = {"Sung", "Brendan", "Vasu"}
-helpDeskSet = {"Calvin", "Anthony"}
-itSet = developerSet.union(helpDeskSet)
+def testSets():
+    developerSet = {"Sung", "Brendan", "Vasu"}
+    helpDeskSet = {"Calvin", "Anthony"}
+    itSet = developerSet.union(helpDeskSet)
+
+    divider = "=" * 30
+    pp(divider + " BEGIN Set Test " + divider)
+    pp("developerSet={}".format(developerSet))
+    pp("helpDeskSet={}".format(helpDeskSet))
+    pp("itSet={}".format(itSet))
+    pp(divider + " END Set Test " + divider)
+
+testSets()
 
 
-pp("developerSet={}".format(developerSet))
-pp("helpDeskSet={}".format(helpDeskSet))
-pp("itSet={}".format(itSet))
