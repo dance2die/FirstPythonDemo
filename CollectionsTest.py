@@ -26,6 +26,10 @@ def testLists():
     # http://stackoverflow.com/a/5846048/4035
     pp("l[::-1]={}".format(l[::-1]))
 
+    # sort and return a copy of a list instead of modifying in place.
+    # http://stackoverflow.com/a/2587419/4035
+    pp("sorted(l, key=len)={}".format(sorted(l, key=len)))
+
     pp(divider + " END List Test " + divider)
 
 
