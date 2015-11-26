@@ -21,6 +21,11 @@ def testLists():
     pp('l.index("string") = {}'.format(l.index("string")))
     del l[l.index("string")]
     pp("l={}".format(l))
+
+    # [::-1] reverses the list without modifying the current list.
+    # http://stackoverflow.com/a/5846048/4035
+    pp("l[::-1]={}".format(l[::-1]))
+
     pp(divider + " END List Test " + divider)
 
 
