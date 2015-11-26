@@ -33,7 +33,22 @@ def testLists():
     pp(divider + " END List Test " + divider)
 
 
-testLists()
+def testDictitionaries():
+    names = {"Me": "Min",
+             "Brother": "Bum",
+             "Sister": "Hui"}
+    pp('names["Me"]={}'.format(names["Me"]))
+
+
 testSets()
+testLists()
+testDictitionaries()
+
+
+
+
+
+
+
 
 
