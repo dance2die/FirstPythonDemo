@@ -38,7 +38,10 @@ def testDictitionaries():
              "Brother": "Bum",
              "Sister": "Hui"}
     pp('names["Me"]={}'.format(names["Me"]))
-
+    urls = dict(microsoft="microsoft.com", google="google.com")
+    pp("urls={}".format(urls))
+    for key,value in names.items():
+        pp("key={}; value={}".format(key, value))
 
 testSets()
 testLists()
