@@ -1,7 +1,13 @@
 from pprint import pprint as pp
 
+
 def convert(value):
-    converted = int(value)
+    converted = -1
+    try:
+        converted = int(value)
+        pp("Conversion succeeded! converted = {}".format(converted))
+    except (ValueError, TypeError):
+        pp("Conversion failed!")
     return converted
 
 
