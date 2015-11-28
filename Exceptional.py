@@ -6,7 +6,8 @@ def convert(value):
     try:
         converted = int(value)
         pp("Conversion succeeded! converted = {}".format(converted))
-    except (ValueError, TypeError):
+    #except (ValueError, TypeError):
+    except:
         pp("Conversion failed!")
     return converted
 
