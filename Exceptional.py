@@ -1,15 +1,16 @@
 from pprint import pprint as pp
+import sys
 
 
 def convert(value):
-    converted = -1
     try:
-        converted = int(value)
-        pp("Conversion succeeded! converted = {}".format(converted))
-    #except (ValueError, TypeError):
-    except:
-        pp("Conversion failed!")
-    return converted
+        return int(value)
+    # except:
+    #     pass
+    except (ValueError, TypeError) as e:
+        print("Conversion error: {}".format(str(e)), file=sys.stderr)
+        return -1
+
 
 
 pp(convert(33))
