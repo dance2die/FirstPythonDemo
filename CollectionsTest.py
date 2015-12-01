@@ -43,11 +43,16 @@ def testDictitionaries():
     for key,value in names.items():
         pp("key={}; value={}".format(key, value))
 
-testSets()
-testLists()
-testDictitionaries()
+
+def main():
+    testSets()
+    testLists()
+    testDictitionaries()
 
 
+if __name__ == '__main__':
+    pp("name={}".format(__name__))
+    main()
 
 
 
