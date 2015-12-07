@@ -11,7 +11,18 @@ def convert(value):
         print("Conversion error: {}".format(str(e)), file=sys.stderr)
         return -1
 
+def raiseError():
+    raise ValueError
 
 
 pp(convert(33))
-pp(convert("abc"))
+# pp(convert("abc"))
+
+try:
+    raiseError()
+except (ValueError) as e:
+    pp(e)
+
+
+
+
