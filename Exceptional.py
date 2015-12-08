@@ -28,6 +28,20 @@ def testCustomValuError():
     except (CustomValueError) as e:
         print("Customer Value Error Exception!", e.error)
 
+
+def testFinallyClause():
+    try:
+        raise CustomValueError("Value must be between 1 and 10.")
+    except:
+        pp("testFinallyClause.except: exiting...")
+        sys.exit()
+    finally:
+        pp("called before sys.exit() call")
+
+    pp("this is never called.")
+
+
+
 pp(convert(33))
 # pp(convert("abc"))
 
@@ -38,4 +52,4 @@ except (ValueError) as e:
 
 
 testCustomValuError()
-
+testFinallyClause()
