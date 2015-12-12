@@ -1,3 +1,4 @@
+import collections
 from pprint import pprint as pp
 
 divider = "=" * 30
@@ -33,7 +34,7 @@ def testLists():
     pp(divider + " END List Test " + divider)
 
 
-def testDictitionaries():
+def testDictionaries():
     names = {"Me": "Min",
              "Brother": "Bum",
              "Sister": "Hui"}
@@ -44,10 +45,37 @@ def testDictitionaries():
         pp("key={}; value={}".format(key, value))
 
 
+def testDeque():
+    myDeque = collections.deque("abcdef", 10)
+    pp("Starting state:")
+    for item in myDeque:
+        print(item, end=" ")
+
+    pp("\r\n\r\nAppending and extending right")
+    myDeque.append("h")
+    myDeque.append("ij")
+    for item in myDeque:
+        print(item, end=" ")
+
+    print("\r\nmyDeque contains {0} items.".format(len(myDeque)))
+    print("\r\nPopping right")
+    print("Popping {0}".format(myDeque.pop()))
+    for Item in myDeque:
+       print(Item, end=" ")
+    print("\r\n\r\nAppending and extending left")
+    myDeque.appendleft("xyz")
+    myDeque.extendleft("abc")
+    for Item in myDeque:
+       print(Item, end=" ")
+    print("\r\nmyDeque contains {0} items."
+          .format(len(myDeque)))
+
+
 def main():
-    testSets()
-    testLists()
-    testDictitionaries()
+    # testSets()
+    # testLists()
+    # testDictionaries()
+    testDeque()
 
 
 if __name__ == '__main__':
