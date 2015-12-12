@@ -69,7 +69,14 @@ def testDeque():
        print(Item, end=" ")
     print("\r\nmyDeque contains {0} items."
           .format(len(myDeque)))
-
+    print("\r\nPopping left")
+    print("Popping {0}".format(myDeque.popleft()))
+    for Item in myDeque:
+       print(Item, end=" ")
+    print("\r\n\r\nRemoving")
+    myDeque.remove("a")
+    for Item in myDeque:
+       print(Item, end=" ")
 
 def main():
     # testSets()
