@@ -2,7 +2,7 @@ from pprint import pprint as pp
 
 
 class MyClass:
-    MyVar = 0
+    MyVar = 3
 
 
 def main():
