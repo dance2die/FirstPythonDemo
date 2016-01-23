@@ -1,3 +1,5 @@
+import csv
+
 class FormatData:
    def __init__(self, Name="", Age=0, Married=False):
       self.Name = Name
@@ -10,3 +12,19 @@ class FormatData:
          self.Age,
          self.Married)
       return OutString
+
+   def SaveData(Filename = "", DataList = []):
+       with open(Filename, "w", newline='\n') as csvfile:
+            datawriter = csv.writer(
+                csvfile,
+                delimiter='\n',
+                quotechar=" ",
+                quoting=csv.QUOTE_NONNUMERIC)
+            datawriter.writerow(DataList)
+            csvfile.close()
+            print("Data saved!")
+
+
+
+
+
